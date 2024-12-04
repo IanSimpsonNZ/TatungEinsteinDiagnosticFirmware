@@ -61,7 +61,7 @@ testLoop:
     CALL NC, checkPCI
     CALL NC, checkPIO
 
-    jr NC, testLoop
+    JR NC, testLoop
 
     LD A, COLOR_WHITE
     CALL setTextColor
