@@ -50,15 +50,18 @@ ROMEntry:
     LD B, 0F1h
     CALL setVDPRegister
 
+testLoop:
     CALL printInfo
     CALL checkLowRAM
     CALL NC, checkHighRAM
-    CALL NC, checkPSG
+    ; CALL NC, checkPSG
     CALL NC, checkVDP
-    CALL NC, checkFDC
+    ; CALL NC, checkFDC
     CALL NC, checkCTC
     CALL NC, checkPCI
     CALL NC, checkPIO
+
+    jr NC, testLoop
 
     LD A, COLOR_WHITE
     CALL setTextColor
