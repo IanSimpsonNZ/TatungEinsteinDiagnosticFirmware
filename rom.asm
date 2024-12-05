@@ -52,6 +52,7 @@ ROMEntry:
 
 testLoop:
     CALL printInfo
+    CALL resetPCI
     CALL checkLowRAM
     CALL NC, checkHighRAM
     ; CALL NC, checkPSG
@@ -912,6 +913,28 @@ checkCTC:
     defm "Try I058 I026 \r", '\n' + 80h
     SCF    ; carry=1 signals error
     JP checkCTC_exit
+
+
+;********************************************************
+; resetPCI (8251 USART - I060)
+resetPCI:
+    LD A, COLOR_LIGHT_YELLOW
+    CALL setTextColor
+    MCAL_ROM_ZPRM
+    defm "Resetting PCI...\r", '\n' + 80h
+    
+    ; reset sequence stolen from https://adangel.org/2023/06/25/serial-8251A/ 
+    LD A, 091h        ; put in command mode??? - no idea what this does
+    OUT (PCI_CTRL), A
+    LD A, 040h        ; internal reset
+    OUT (PCI_CTRL), A
+    LD A, 043h        ; 8n1
+    OUT (PCI_CTRL), A
+    LD A, 010h        ; reset error flags
+    OUT (PCI_CTRL), A
+
+    RET
+
 
 
 ;********************************************************
