@@ -1,15 +1,20 @@
 ;   Diagnostic ROM for the Tatung Einstein TC-01
 ;
 ;   Burn this firmware on a 2764 EPROM and place it in the free slot next to the original firmware.
+;
 ;   Currently it tests for:
 ;     - 64K dynamic RAMs (I008, I010, I011, I012, I013, I014, I015 and I016 - 8x4164)
-;     - PSG (AY-3-8910) and connected keyboard
 ;     - VDP (TMS9129) and VRAM
-;     - FDC (FD1770)
 ;     - CTC
 ;     - PCI (8251 USART)
 ;     - Z80PIO
 ;
+;    It still contains the routines to test:
+;     - PSG (AY-3-8910) and connected keyboard
+;     - FDC (FD1770)
+;   but these are not called to allow for testing of the baord with no keyboard or floppy
+;   drives attached.  Maybe I'l add an option to select interactive mode if a keyboard is
+;   attached.
 ;
 ;   Copyright 2019 by Fabrizio Di Vittorio (fdivitto2013@gmail.com - https://github.com/fdivitto)
 ;
