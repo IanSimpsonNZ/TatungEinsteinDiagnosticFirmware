@@ -1,6 +1,6 @@
 This is a crude hack of Fabrizio Di Vittorio's firmware to allow continuous testing of a Tatung Einstein without keyboard or floppy drives attached.
 
-My Einstein had an intermittent fault and I used this firmware to stress test the system until the fault occured.  My system (luckliy) seems to have good RAM, so I can't say this version of the fiirmware has been thoroughly tested!
+My Einstein had an intermittent fault and I used this firmware to stress test the system until the fault occured.  My system (luckily) seems to have good RAM, so I can't say this version of the fiirmware has been thoroughly tested!
 
 All credit should go to Fabrizio (fdivitto2013@gmail.com - https://github.com/fdivitto)
 
