@@ -1,3 +1,6 @@
+Hack to allow this to run continuously without keyboard or floppy drives.
+Do not use - not tested, still hacking ...
+
 # Tatung Einstein Diagnostic Firmware
 Diagnostic ROM for the Tatung Einstein TC-01
 
