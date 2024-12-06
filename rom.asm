@@ -57,14 +57,14 @@ ROMEntry:
 
 testLoop:
     CALL printInfo
-    CALL resetPCI
+    ;CALL resetPCI
     CALL checkLowRAM
     CALL NC, checkHighRAM
     ; CALL NC, checkPSG
     CALL NC, checkVDP
     ; CALL NC, checkFDC
     CALL NC, checkCTC
-    CALL NC, checkPCI
+    ;CALL NC, checkPCI
     CALL NC, checkPIO
 
     JR NC, testLoop

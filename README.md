@@ -1,3 +1,6 @@
+DO NOt USE - I think this is broken as always seems to show a PCI error on the third loop ... working on it ...
+
+
 This is a crude hack of Fabrizio Di Vittorio's firmware to allow continuous testing of a Tatung Einstein without keyboard or floppy drives attached.
 
 My Einstein had an intermittent fault and I used this firmware to stress test the system until the fault occured.  My system (luckily) seems to have good RAM, so I can't say this version of the fiirmware has been thoroughly tested!
